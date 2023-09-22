@@ -1,13 +1,13 @@
 ﻿// FirstConsoleApplication.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-
+#define _USE_MATH_DEFINES
 #include <iostream>
 
-int main()
+void test() 
 {
     std::cout << "Hello World!\n";
     std::cout << -59.5 << 'x' << "ghfghjfghj" << true << false << '\n';
-    
+
     //typ nazwa;
     int number;
     number = 5;
@@ -24,8 +24,35 @@ int main()
     =
 
     */
-
+    std::cout << "Komuinikat \n";
     std::cin >> secondNumber >> number;
+}
+
+/*
+Podstawy programowania:
+
+1. 
+2. Program obliczający pole prostokąta.
+3. Program obliczający objętość stożka.
+4. Program obliczający pole koła.
+5. Program obliczający wartość wyrażenia a^2 + b^2
+6. Program obliczający pole trójkąta o podstawie b i wysokości h
+7. Program obliczający objętość kuli o promieniu r
+8. Program obliczający pole trapezu o podstawach a i b oraz wysokości h
+9. Program obliczający średnią ważoną trzech liczb z podanymi odpowiednimi wagami w1, w2 i w3.
+*/
+
+//Program obliczający średnią arytmetyczną dwóch liczb.
+void task1() 
+{
+
+}
+
+int main()
+{
+    //test();
+    task1();
+    //task2();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
