@@ -46,7 +46,8 @@ Podstawy programowania:
 void task1() 
 {
     double firstNumber, secondNumber;
-    std::cout << "Podaj pierwszą liczbę:\n";
+
+    std::cout << "Podaj pierwszą liczbę:\n";\
     std::cin >> firstNumber;
     std::cout << "Podaj drugą liczbę:\n";
     std::cin >> firstNumber;
@@ -54,7 +55,6 @@ void task1()
     double avarageOfNumbers = (firstNumber + secondNumber) / 2;
 
     std::cout << "Średnia tych liczb to: " << avarageOfNumbers << "\n";
-}
 }
 
 int main()
