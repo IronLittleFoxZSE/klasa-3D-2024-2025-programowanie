@@ -50,7 +50,7 @@ void task1()
     std::cout << "Podaj pierwszą liczbę:\n";\
     std::cin >> firstNumber;
     std::cout << "Podaj drugą liczbę:\n";
-    std::cin >> firstNumber;
+    std::cin >> secondNumber;
 
     double avarageOfNumbers = (firstNumber + secondNumber) / 2;
 
