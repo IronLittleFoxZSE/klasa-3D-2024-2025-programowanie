@@ -45,7 +45,12 @@ void task1()
 //Program sprawdzający czy podana liczba jest parzysta czy nieparzysta
 void task2()
 {
-
+    if (true)
+    {
+        task1();
+    }
+    else
+        task1();
 }
 
 int main()
