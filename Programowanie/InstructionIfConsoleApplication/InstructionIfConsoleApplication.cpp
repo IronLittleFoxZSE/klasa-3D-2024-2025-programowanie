@@ -51,10 +51,50 @@ void task2()
     
 }
 
+//Program sprawdzający czy podana data jest poprawna (np. sprawdzając, czy dzień jest z zakresu od 1 do 31, miesiąc od 1 do 12 itd.)
+void task3()
+{
+    int day, month, year;
+    std::cout << "Podaj dzień\n";
+    std::cin >> day;
+    std::cout << "Podaj miesiąc\n";
+    std::cin >> month;
+    std::cout << "Podaj rok\n";
+    std::cin >> year;
+
+    bool isLeapYear = year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
+
+    if (day < 1 
+        || day > 31
+
+        || month < 1
+        || month > 12
+
+        || (day == 31
+            && (month == 4
+                || month == 6
+                || month == 9
+                || month == 11))
+
+        || (month == 2
+            && day > 29)
+
+        || (month == 2
+            && day == 29
+            && !isLeapYear)
+        )
+    {
+        std::cout << "Nie istnieje taka data\n";
+        return;
+    }
+
+    std::cout << "Poprawna data\n";
+}
+
 int main()
 {
     setlocale(LC_CTYPE, "polish");
 
     //task1();
-    task2();
+    task3();
 }
