@@ -21,6 +21,11 @@ Operatory porównania:
 8. Program sprawdzjący czy podana liczba jest z przediału <1;15)
 9. Program sprawdzający czy osoba jest pełnoletnia.
 10. Program, który sprawdzi czy z podanych długości boków można zrobić trójkąt.
+
+11. Napisz program, który będzie działać jako prosty kalkulator matematyczny, umożliwiając użytkownikowi wybór operacji (dodawanie, odejmowanie, mnożenie, dzielenie) i wprowadzanie liczb do obliczeń.
+12. Napisz program, który wczyta numer miesiąca i wyświetli jego słowny odpowiednik.
+13. Napisz program, który na podstawie współczynników równania kwadratowego (a, b, c) sprawdzi, czy to równanie ma rozwiązania rzeczywiste, i jeśli tak, to je obliczy.
+
 */
 
 
