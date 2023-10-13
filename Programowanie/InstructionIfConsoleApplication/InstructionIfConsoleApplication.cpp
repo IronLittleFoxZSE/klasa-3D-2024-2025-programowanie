@@ -106,14 +106,11 @@ void task4()
 	{
 		std::cout << "Jeden\n";
 	}
-	else if (number == 2)
+	else if (number == 2 
+		     || number == 85)
 	{
 		std::cout << "Dwa\n";
 		//number = number * 2;
-	}
-	else if (number = 98)
-	{
-		std::cout << "Komunikat";
 	}
 	else if (number == 5)
 	{
@@ -125,6 +122,23 @@ void task4()
 		std::cout << "Inna opcja\n";
 	}
 
+	switch (number)
+	{
+	case 1:
+		std::cout << "Jeden\n";
+		break;
+	case 2:
+	case 85:
+		std::cout << "Dwa\n";
+		//number = number * 2;
+		break;
+	case 5:
+		std::cout << "Pięć\n";
+		//number = number / 2;
+		break;
+	default:
+		std::cout << "Inna opcja\n";
+	}
 
 
 }
