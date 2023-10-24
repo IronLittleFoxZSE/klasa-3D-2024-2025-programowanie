@@ -106,8 +106,8 @@ void task4()
 	{
 		std::cout << "Jeden\n";
 	}
-	else if (number == 2 
-		     || number == 85)
+	else if (number == 2
+		|| number == 85)
 	{
 		std::cout << "Dwa\n";
 		//number = number * 2;

@@ -20,12 +20,45 @@ void task2()
 	std::cout << "Podaj b\n";
 	std::cin >> b;
 
+	/*if (b != 0)
+	{
+		int tmp = b;
+		b = a % b;
+		a = tmp;
+		if (b != 0)
+		{
+			int tmp = b;
+			b = a % b;
+			a = tmp;
+			if (b != 0)
+			{
+				int tmp = b;
+				b = a % b;
+				a = tmp;
+				if (b != 0)
+				{
+					int tmp = b;
+					b = a % b;
+					a = tmp;
+					//....
+				}
+			}
+		}
+	}*/
+
 	while (b != 0)
 	{
 		int tmp = b;
 		b = a % b;
 		a = tmp;
 	}
+
+	/*for (; b != 0; )
+	{
+		int tmp = b;
+		b = a % b;
+		a = tmp;
+	}*/
 
 	std::cout << "NWD = " << a << "\n";
 }
@@ -71,11 +104,54 @@ void task3()
 	}
 	std::cout << "\n";
 
+	for (int i = 0; number > i; i++)
+	{
+		std::cout << (i + 1) << ", ";
+	}
+	std::cout << "\n";
+}
 
+//Napisz program, który wylosuje liczbę a uzytkownik ma zgodnąć ją.
+void task4()
+{
+	srand(time(NULL));
 	
+	int secretNumber = rand() % 10;
+
+	/*std::cout << "Zgadnij liczbe:\n";
+	int number;
+	std::cin >> number;
+	if (number != secretNumber)
+	{
+		std::cout << "Zgadnij liczbe:\n";
+		int number;
+		std::cin >> number;
+		if (number != secretNumber)
+		{
+			std::cout << "Zgadnij liczbe:\n";
+			int number;
+			std::cin >> number;
+			if (number != secretNumber)
+			{
+				std::cout << "Zgadnij liczbe:\n";
+				int number;
+				std::cin >> number;
+				if (number != secretNumber)
+					....
+			}
+		}
+	}*/
+
+	int number;
+	do
+	{
+		std::cout << "Zgadnij liczbe:\n";
+		std::cin >> number;
+	} while (number != secretNumber);
+	std::cout << "Gratulacje\n";
 }
 
 int main()
 {
-	task2();
+	task4();
 }
