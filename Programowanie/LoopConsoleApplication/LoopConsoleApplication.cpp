@@ -182,7 +182,19 @@ void task4()
 	std::cout << "Gratulacje\n";
 }
 
+//Program obliczający sumę liczb od 1 do 100
+void task5()
+{
+	int sum = 0;
+	for (int i = 1; i <= 100; i++)
+	{
+		sum = sum + i;
+	}
+
+	std::cout << "Suma od 1  do 100 wynosi " << sum << "\n";
+}
+
 int main()
 {
-	task4();
+	task5();
 }
