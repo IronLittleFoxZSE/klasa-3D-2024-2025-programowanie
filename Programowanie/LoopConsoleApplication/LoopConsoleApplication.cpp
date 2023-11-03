@@ -20,7 +20,7 @@ FOR
 * Program wyświetlający na ekranie tabliczkę mnożenia od 1 do 9 (np. 1x1=1, 1x2=2, 1x3=3 itd.).
 * Program wyświetlający na ekranie wszystkie liczby podzielne przez 3 z zakresu od 1 do 100
 * Program obliczający sumę kwadratów liczb od 1 do 10
-* Program wyświetlający na ekranie ciąg Fibonacciego do 20 elementu (ciąg Fibonacciego to ciąg gdzie każdy element jest sumą dwóch poprzednich, np. 0, 1, 1, 2, 3, 5, 8, 13 itd.)
+* 
 * Program, kóry wyświetli poniższe cztery zwory:
 	****       54321        121212        122333
 	***        65432        212121        223334444
@@ -194,7 +194,23 @@ void task5()
 	std::cout << "Suma od 1  do 100 wynosi " << sum << "\n";
 }
 
+//Program wyświetlający na ekranie ciąg Fibonacciego do 20 elementu (ciąg Fibonacciego to ciąg gdzie każdy element jest sumą dwóch poprzednich, np. 0, 1, 1, 2, 3, 5, 8, 13 itd.)
+void task6()
+{
+	std::cout << "0 , 1, ";
+
+	int fib2 = 0;
+	int fib1 = 1;
+	for (int i = 0; i < 18; i++)
+	{
+		int fib = fib2 + fib1;
+		std::cout << fib << ", ";
+		fib2 = fib1;
+		fib1 = fib;
+	}
+}
+
 int main()
 {
-	task5();
+	task6();
 }
