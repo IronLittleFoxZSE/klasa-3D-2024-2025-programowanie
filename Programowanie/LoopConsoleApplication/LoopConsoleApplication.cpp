@@ -210,7 +210,69 @@ void task6()
 	}
 }
 
+/*
+* Program, kóry wyświetli poniższe cztery zwory:
+	****       54321        121212        122333
+	***        65432        212121        223334444
+	**         76543        121212        333444455555
+	*          87654        212121        444455555666666
+*/
+void task7()
+{
+	int numberOfLines = 5;
+
+	//pierwsza
+	for (int lineNumber = 0; lineNumber < numberOfLines; lineNumber++)
+	{
+		for (int numberOfStar = 0; numberOfStar < numberOfLines - lineNumber; numberOfStar++)
+		{
+			std::cout << "*";
+		}
+		std::cout << "\n";
+	}
+
+	for (int lineNumber = 0; lineNumber < numberOfLines; lineNumber++)
+	{
+		for (int numberOfStar = 0; numberOfStar <= lineNumber; numberOfStar++)
+		{
+			std::cout << "*";
+		}
+		std::cout << "\n";
+	}
+
+	//druga
+	for (int lineNumber = 0; lineNumber < numberOfLines; lineNumber++)
+	{
+		for (int number = lineNumber + 5; number > lineNumber; number--)
+		{
+			std::cout << number;
+		}
+		std::cout << "\n";
+	}
+
+	//trzecia
+	for (int lineNumber = 0; lineNumber < numberOfLines; lineNumber++)
+	{
+		for (int number = 0; number < 6; number++)
+		{
+			std::cout << (number + lineNumber) % 2 + 1;
+		}
+		std::cout << "\n";
+	}
+
+	//czwarta
+	for (int lineNumber = 0; lineNumber < numberOfLines; lineNumber++)
+	{
+		for (int number = lineNumber + 1; number <= lineNumber + 3; number++)
+		{
+			for (int i = 0; i < number; i++ )
+				std::cout << number;
+		}
+		std::cout << "\n";
+	}
+}
+
 int main()
 {
-	task6();
+	task7();
 }
