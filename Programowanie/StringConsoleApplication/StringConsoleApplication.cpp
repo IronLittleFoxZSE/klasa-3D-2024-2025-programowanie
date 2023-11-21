@@ -28,7 +28,7 @@ void task1()
 void task2()
 {
     std::string userName;
-    userName = "Ala";
+    //userName = "Ala";
     std::cout << "Podaj swoje imię:\n";
     std::cin >> userName;
 
