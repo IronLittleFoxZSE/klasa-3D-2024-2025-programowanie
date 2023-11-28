@@ -74,8 +74,45 @@ void task3()
     std::cout << "Małych liter 'a' jest " << counter << "\n";
 }
 
-int main()
+// Poproś użytkownika o wprowadzenie liczby całkowitej w systemie dziesiętnym.
+//Następnie skonwertuj tę liczbę na system dwójkowy (binarny) i wyświetl wynik.
+void task4()
 {
-    task3();
+    int number;
+    int rest;
+    std::string binaryNumber = "";
+
+    std::cout << "Podaj liczbe\n";
+    std::cin >> number;
+
+    do
+    {
+        rest = number % 2;
+        if (rest == 0)
+            binaryNumber = "0" + binaryNumber;
+        else
+            binaryNumber = "1" + binaryNumber;
+        //std::cout << rest;
+        number = number / 2;
+    } while (number != 0);
+
+    std::cout << "Liczba binarnie " << binaryNumber << "\n";
 }
 
+int main()
+{
+    task4();
+}
+
+/*
+68 : 2  |   
+34 : 2  |   
+17 : 2  |   
+8  : 2  |   
+4  : 2  |   
+2  : 2  |   
+1  : 2  |  
+0
+
+binaryNumber = "1000100"
+*/
