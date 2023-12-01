@@ -4,7 +4,7 @@
 * Napisz program, który będzie prosił o hasło. Nie przepuści dalej dopóki nie zostanie ono podane prawidłowo.
 * Napisz program, który pobiera od użytkownika ciąg znaków i wyświetla liczbę samogłosek i spółgłosek w tym ciągu.
 * Poproś użytkownika o wprowadzenie liczby całkowitej w systemie dziesiętnym. Następnie skonwertuj tę liczbę na system dwójkowy (binarny) i wyświetl wynik.
-* Program sprawdzający czy podany ciąg znaków jest palindromem (czyli takim, który czytany od tyłu jest taki sam, jak czytany od przodu, np. "kajak")
+* 
 * Program sprawdzający czy podane dwa słowa są anagramami (czyli takimi, które zawierają te same litery, ale w innym układzie, np. "klasa" i "salka")
 * 
 
@@ -99,9 +99,47 @@ void task4()
     std::cout << "Liczba binarnie " << binaryNumber << "\n";
 }
 
+//Program sprawdzający czy podany ciąg znaków jest palindromem (czyli takim, który czytany od tyłu jest taki sam, jak czytany od przodu, np. "kajak")
+void task5()
+{
+    std::string textFromUser;
+    std::cout << "Podaj napis\n";
+    std::cin >> textFromUser;
+
+    //wersja 1
+    std::string reverseTextFromUser = "";
+    for (int i = 0; i < textFromUser.length(); i++)
+    {
+        reverseTextFromUser = textFromUser[i] + reverseTextFromUser;
+    }
+
+    if (textFromUser == reverseTextFromUser)
+        std::cout << "To słowo jest palindromem\n";
+    else
+        std::cout << "To słowo nie jest palindromem\n";
+
+    //wersja 2
+    bool isPalindrome = true;
+
+    for (int left = 0, right = textFromUser.length() - 1; left < right ; left++, right--)
+    {
+        if (textFromUser[left] != textFromUser[right])
+        {
+            isPalindrome = false;
+            break;
+        }
+    }
+
+    if (isPalindrome)
+        std::cout << "To słowo jest palindromem\n";
+    else
+        std::cout << "To słowo nie jest palindromem\n";
+}
+
+
 int main()
 {
-    task4();
+    task5();
 }
 
 /*
