@@ -4,9 +4,6 @@
 * Napisz program, który będzie prosił o hasło. Nie przepuści dalej dopóki nie zostanie ono podane prawidłowo.
 * Napisz program, który pobiera od użytkownika ciąg znaków i wyświetla liczbę samogłosek i spółgłosek w tym ciągu.
 * Poproś użytkownika o wprowadzenie liczby całkowitej w systemie dziesiętnym. Następnie skonwertuj tę liczbę na system dwójkowy (binarny) i wyświetl wynik.
-* 
-* Program sprawdzający czy podane dwa słowa są anagramami (czyli takimi, które zawierają te same litery, ale w innym układzie, np. "klasa" i "salka")
-* 
 
 * Program wyciągający informacje z numeru PESEL
 * Program implementujący algorytm szyfrowania Cezara (proste szyfrowanie, w którym każdy znak w tekście jest zastępowany innym znakiem, przesuniętym o stałą liczbę pozycji w alfabecie).
@@ -136,10 +133,54 @@ void task5()
         std::cout << "To słowo nie jest palindromem\n";
 }
 
+//Program sprawdzający czy podane dwa słowa są anagramami (czyli takimi, które zawierają te same litery, ale w innym układzie, np. "klasa" i "salka")
+void task6()
+{
+    std::string firstText = "klasa";
+    std::string secondText = "salka";
+
+    if (firstText.length() == secondText.length())
+    {
+        for (int i = 0; i < firstText.length(); i++)
+        {
+            bool isSignIn = false;
+            for (int j = 0; j < secondText.length(); j++)
+            {
+                if (secondText[j] == firstText[i])
+                {
+                    secondText[j] = ' ';
+                    isSignIn = true;
+                    break;
+                }
+            }
+            if (isSignIn)
+                continue;
+            else
+                break;
+        }
+
+        bool areAllZeros = true;
+        for (int i = 0; i < secondText.length(); i++)
+        {
+            if (secondText[i] != ' ')
+            {
+                areAllZeros = false;
+                break;
+            }
+        }
+
+        if (areAllZeros)
+            std::cout << "Są to anagramy\n";
+        else
+            std::cout << "Nie są to anagramy\n";
+    }
+    else
+        std::cout << "Nie są to anagramy\n";
+}
 
 int main()
 {
-    task5();
+    task6();
 }
 
 /*
