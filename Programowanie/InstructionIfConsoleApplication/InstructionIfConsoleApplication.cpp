@@ -139,8 +139,70 @@ void task4()
 	default:
 		std::cout << "Inna opcja\n";
 	}
+}
 
+//Napisz program, który znajdzie największą wartość z jednej wartości
+void task5()
+{
+	int firstNumber;
+	std::cout << "Podaj pierwszą liczbę\n";
+	std::cin >> firstNumber;
 
+	std::cout << "Największa to: " << firstNumber << "\n";
+}
+
+//Napisz program, który znajdzie największą wartość z dwóch wartości
+void task6()
+{
+	int firstNumber, secondNumber;
+	std::cout << "Podaj pierwszą liczbę\n";
+	std::cin >> firstNumber;
+	std::cout << "Podaj drugą liczbę\n";
+	std::cin >> secondNumber;
+
+	if (secondNumber > firstNumber)
+		std::cout << "Największa to: " << secondNumber << "\n";
+	else
+		std::cout << "Największa to: " << firstNumber << "\n";
+}
+
+//Napisz program, który znajdzie największą wartość z trzech wartości
+void task6()
+{
+	int firstNumber = 0, secondNumber = -5, thirdNumber = 2;
+
+	if (thirdNumber > firstNumber && thirdNumber > secondNumber)
+		std::cout << "Największa to: " << thirdNumber << "\n";
+	else
+	{
+		if (secondNumber > firstNumber)
+			std::cout << "Największa to: " << secondNumber << "\n";
+		else
+			std::cout << "Największa to: " << firstNumber << "\n";
+	}
+}
+
+//Napisz program, który znajdzie największą wartość z czterech wartości
+void task6()
+{
+	int firstNumber = 0, secondNumber = -5, thirdNumber = 2, fourthNumber = 8;
+
+	if (fourthNumber > firstNumber
+		&& fourthNumber > secondNumber
+		&& fourthNumber > thirdNumber)
+		std::cout << "Największa to: " << fourthNumber << "\n";
+	else
+	{
+		if (thirdNumber > firstNumber && thirdNumber > secondNumber)
+			std::cout << "Największa to: " << thirdNumber << "\n";
+		else
+		{
+			if (secondNumber > firstNumber)
+				std::cout << "Największa to: " << secondNumber << "\n";
+			else
+				std::cout << "Największa to: " << firstNumber << "\n";
+		}
+	}
 }
 
 int main()

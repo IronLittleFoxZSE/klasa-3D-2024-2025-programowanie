@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 
 //Napisz program, który wczyta 5 liczb a następnie je wyświetli na konsoli
+//w odwrotnej kolejności
 void task1()
 {
 	const int SIZE_OF_ARRAY = 5;
@@ -12,9 +13,11 @@ void task1()
 		std::cin >> numbers[i];
 	}
 
-	for (int i = 0; i < SIZE_OF_ARRAY; i++)
+	for (int i = SIZE_OF_ARRAY - 1; i >= 0; i--)
 		std::cout << "Podana liczba " << numbers[i] << "\n";
 }
+
+
 
 int main()
 {
