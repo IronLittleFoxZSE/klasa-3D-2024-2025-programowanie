@@ -167,7 +167,7 @@ void task6()
 }
 
 //Napisz program, który znajdzie największą wartość z trzech wartości
-void task6()
+void task7()
 {
 	int firstNumber = 0, secondNumber = -5, thirdNumber = 2;
 
@@ -183,7 +183,7 @@ void task6()
 }
 
 //Napisz program, który znajdzie największą wartość z czterech wartości
-void task6()
+void task8()
 {
 	int firstNumber = 0, secondNumber = -5, thirdNumber = 2, fourthNumber = 8;
 
