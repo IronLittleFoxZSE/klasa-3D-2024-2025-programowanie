@@ -89,7 +89,7 @@ void task4()
 {
 	const int LOWER_RANGE = -12000;
 	const int UPPER_RANGE = 10000;
-	
+
 	const int SIZE_OF_ARRAY = 5;
 	int numbers[SIZE_OF_ARRAY];
 
@@ -140,9 +140,10 @@ void task4()
 //Napisz program, który wyznaczy wszystkie liczby pierwsze od 2 do zadeklarowanego zakresu. Metoda sito Eratostenesa.
 void task5()
 {
-	const int UPPER_RANGE = 100;
+	const int UPPER_RANGE = 1000000;
 
-	for (int numberToCheck = 2; numberToCheck <= UPPER_RANGE; numberToCheck++)
+	//wersja 1
+	/*for (int numberToCheck = 2; numberToCheck <= UPPER_RANGE; numberToCheck++)
 	{
 		bool isPrime = true;
 		for (int i = 2; i <= sqrt(numberToCheck); i++)
@@ -156,6 +157,31 @@ void task5()
 
 		if (isPrime)
 			std::cout << numberToCheck << ", ";
+	}
+	std::cout << "\n";*/
+
+	//wersja 2
+	bool primeNumbers[UPPER_RANGE + 1];
+	for (int i = 2; i < UPPER_RANGE + 1; i++)
+	{
+		primeNumbers[i] = true;
+	}
+
+	for (int i = 2; i < UPPER_RANGE + 1; i++)
+	{
+		if (primeNumbers[i])
+		{
+			for (int j = i + i; j < UPPER_RANGE + 1; j = j + i)
+			{
+				primeNumbers[j] = false;
+			}
+		}
+	}
+
+	for (int i = 2; i < UPPER_RANGE + 1; i++)
+	{
+		if (primeNumbers[i])
+			std::cout << i << ", ";
 	}
 	std::cout << "\n";
 }
