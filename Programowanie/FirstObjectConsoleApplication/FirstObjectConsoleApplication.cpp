@@ -8,6 +8,27 @@ private:
 	int z;
 
 public:
+	Point()
+	{
+		x = 3;
+		y = 7;
+		z = 10;
+	}
+
+	Point(int xx)
+	{
+		x = xx;
+		y = 7;
+		z = 10;
+	}
+
+	Point(int xx, int yy, int zz)
+	{
+		x = xx;
+		y = yy;
+		z = zz;
+	}
+
 	void SetX(int value)
 	{
 		//x = abs(value);
@@ -44,5 +65,9 @@ int main()
 	//firstPoint.y = 5;
 	//firstPoint.z = 8;
 	std::cout << "Odległość " << firstPoint.DistanceFromCenter() << "\n";
+
+	Point secondPiont(15);
+	std::cout << "Odległość " << secondPiont.DistanceFromCenter() << "\n";
+
 
 }
