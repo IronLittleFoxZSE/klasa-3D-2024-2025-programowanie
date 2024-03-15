@@ -51,6 +51,14 @@ public:
 		z = zz;
 	}
 
+	//konstrukctor kopiujący
+	Point(Point &p)
+	{
+		x = p.x;
+		y = p.y;
+		z = p.z;
+	}
+
 	~Point()
 	{
 		std::cout << "Tera działa destruktor\n";
@@ -97,4 +105,7 @@ int main()
 
 	Point secondPiont(15);
 	std::cout << "Odległość " << secondPiont.DistanceFromCenter() << "\n";
+
+	Point thirdPoint(secondPiont);
+	std::cout << "Odległość " << thirdPoint.DistanceFromCenter() << "\n";
 }
