@@ -90,9 +90,7 @@ public:
 	}
 };
 
-
-
-int main()
+void taksPoint()
 {
 	{
 		Point firstPoint;
@@ -108,4 +106,88 @@ int main()
 
 	Point thirdPoint(secondPiont);
 	std::cout << "Odległość " << thirdPoint.DistanceFromCenter() << "\n";
+}
+
+
+class Rectangle
+{
+private:
+	double sideA, sideB;
+public:
+	Rectangle()
+	{
+		sideA = 3.14;
+		sideB = 7.25;
+	}
+
+	Rectangle(double a, double b)
+	{
+		sideA = a;
+		sideB = b;
+	}
+
+	double GetPerimeter()
+	{
+		return 2 * sideA + 2 * sideB;
+	}
+
+	double GetArea()
+	{
+		return sideA * sideB;
+	}
+
+	void ShowInfo()
+	{
+		std::cout << "Informacja o prostokącie\n";
+		std::cout << "Bok a = " << sideA << "\n";
+		std::cout << "Bok b = " << sideB << "\n";
+		std::cout << "Obwód = " << GetPerimeter() << "\n";
+		std::cout << "Pole = " << GetArea() << "\n";
+	}
+};
+
+class Parallelogram
+{
+private:
+	double sideA, sideB;
+	double height;
+public:
+	Parallelogram()
+	{
+		sideA = 3;
+		sideB = 19.75;
+		height = 12.5;
+	}
+
+	Parallelogram(double a, double b, double h)
+	{
+		sideA = a;
+		sideB = b;
+		height = h;
+	}
+
+	double GetPerimeter()
+	{
+		return 2 * sideA + 2 * sideB;
+	}
+
+	double GetArea()
+	{
+		return sideA * height;
+	}
+
+	void ShowInfo()
+	{
+		std::cout << "Informacja o równoległoboku\n";
+		std::cout << "Bok a = " << sideA << "\n";
+		std::cout << "Bok b = " << sideB << "\n";
+		std::cout << "Wysokość = " << height << "\n";
+		std::cout << "Obwód = " << GetPerimeter() << "\n";
+		std::cout << "Pole = " << GetArea() << "\n";
+	}
+};
+
+int main()
+{
+	
 }
