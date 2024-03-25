@@ -5,65 +5,94 @@
 class C
 {
 protected:
-    int fieldA;
+	int fieldA;
+	std::string name;
 
 public:
-    int GetFieldA()
-    {
-        return fieldA;
-    }
+	C()
+	{
+		fieldA = 15;
+		name = "C";
+	}
+
+	C(int a, std::string n)
+	{
+		fieldA = a;
+		name = n;
+	}
+
+	int GetFieldA()
+	{
+		return fieldA;
+	}
+
+	void ShowInfo()
+	{
+		std::cout << "Informacja na temat klasy " << name << "\n";
+		std::cout << "Field A = " << fieldA << "\n";
+	}
 };
 
-class A: public C
+class A : public C
 {
 private:
 
 public:
-    A()
-    {
-        fieldA = 5;
-    }
+	A() :C(5, "A")
+	{
+		//fieldA = 5;
+		//name = "A";
+	}
 
-    void ShowInfo()
-    {
-        std::cout << "Informacja na temat klasy A\n";
-        std::cout << "Field A = " << fieldA << "\n";
-    }
+	A(int a, std::string n)
+	{
+		fieldA = a;
+		name = n;
+	}
+	/*
+	void ShowInfo()
+	{
+		std::cout << "Informacja na temat klasy A\n";
+		std::cout << "Field A = " << fieldA << "\n";
+	}
+	*/
 };
 
 class B : public C
 {
 private:
-    //int fieldA;
-    int fieldB;
+	int fieldB;
 
 public:
-    B()
-    {
-        fieldA = 5;
-        fieldB = 4;
-    }
+	B() :C(10, "B")
+	{
+		//fieldA = 10;
+		fieldB = 4;
+		//name = "B";
+	}
 
-    /*int GetFieldA()
-    {
-        return fieldA;
-    }*/
-
-    int GetFieldB()
-    {
-        return fieldB;
-    }
-
-    void ShowInfo()
-    {
-        std::cout << "Informacja na temat klasy B\n";
-        std::cout << "Field A = " << fieldA << "\n";
-        std::cout << "Field B = " << fieldB << "\n";
-    }
+	int GetFieldB()
+	{
+		return fieldB;
+	}
+	/*
+	void ShowInfo()
+	{
+		std::cout << "Informacja na temat klasy B\n";
+		std::cout << "Field A = " << fieldA << "\n";
+		std::cout << "Field B = " << fieldB << "\n";
+	}
+	*/
 };
 
 int main()
 {
-    A a;
-    a.
+	A a;
+	a.ShowInfo();
+
+	B b;
+	b.ShowInfo();
+
+	C c;
+	c.ShowInfo();
 }
