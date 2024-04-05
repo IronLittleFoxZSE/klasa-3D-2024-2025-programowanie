@@ -7,7 +7,7 @@ class C
 protected:
 	int fieldA;
 	std::string name;
-
+	
 public:
 	C()
 	{
@@ -75,14 +75,15 @@ public:
 	{
 		return fieldB;
 	}
-	/*
+	
 	void ShowInfo()
 	{
-		std::cout << "Informacja na temat klasy B\n";
-		std::cout << "Field A = " << fieldA << "\n";
+		//std::cout << "Informacja na temat klasy B\n";
+		//std::cout << "Field A = " << fieldA << "\n";
+		C::ShowInfo();
 		std::cout << "Field B = " << fieldB << "\n";
 	}
-	*/
+	
 };
 
 int main()
@@ -95,4 +96,5 @@ int main()
 
 	C c;
 	c.ShowInfo();
+
 }
