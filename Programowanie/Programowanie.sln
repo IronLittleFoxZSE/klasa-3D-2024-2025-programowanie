@@ -39,6 +39,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02. Dziedziczenie", "02. Dz
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FirstInheritanceConsoleApplication", "FirstInheritanceConsoleApplication\FirstInheritanceConsoleApplication.vcxproj", "{4F5FE15C-AD3F-4E21-8C50-61AF9ABBEDA3}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GeometryConsoleApplication", "GeometryConsoleApplication\GeometryConsoleApplication.vcxproj", "{F761D5AE-33E3-4B37-95C2-5209BCFB3470}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -119,6 +121,14 @@ Global
 		{4F5FE15C-AD3F-4E21-8C50-61AF9ABBEDA3}.Release|x64.Build.0 = Release|x64
 		{4F5FE15C-AD3F-4E21-8C50-61AF9ABBEDA3}.Release|x86.ActiveCfg = Release|Win32
 		{4F5FE15C-AD3F-4E21-8C50-61AF9ABBEDA3}.Release|x86.Build.0 = Release|Win32
+		{F761D5AE-33E3-4B37-95C2-5209BCFB3470}.Debug|x64.ActiveCfg = Debug|x64
+		{F761D5AE-33E3-4B37-95C2-5209BCFB3470}.Debug|x64.Build.0 = Debug|x64
+		{F761D5AE-33E3-4B37-95C2-5209BCFB3470}.Debug|x86.ActiveCfg = Debug|Win32
+		{F761D5AE-33E3-4B37-95C2-5209BCFB3470}.Debug|x86.Build.0 = Debug|Win32
+		{F761D5AE-33E3-4B37-95C2-5209BCFB3470}.Release|x64.ActiveCfg = Release|x64
+		{F761D5AE-33E3-4B37-95C2-5209BCFB3470}.Release|x64.Build.0 = Release|x64
+		{F761D5AE-33E3-4B37-95C2-5209BCFB3470}.Release|x86.ActiveCfg = Release|Win32
+		{F761D5AE-33E3-4B37-95C2-5209BCFB3470}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -140,6 +150,7 @@ Global
 		{E4AF6D70-0CE3-4520-83CE-CC5A3B7410D8} = {3A062E57-557C-4C02-92C8-F24F31B449EE}
 		{C4544019-A6AA-40B2-B6E1-A772AF6C10F3} = {B4039963-6276-467F-B886-12FFC8D3578A}
 		{4F5FE15C-AD3F-4E21-8C50-61AF9ABBEDA3} = {C4544019-A6AA-40B2-B6E1-A772AF6C10F3}
+		{F761D5AE-33E3-4B37-95C2-5209BCFB3470} = {C4544019-A6AA-40B2-B6E1-A772AF6C10F3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FF5DEF07-D041-4191-AF7B-6506152135A7}
