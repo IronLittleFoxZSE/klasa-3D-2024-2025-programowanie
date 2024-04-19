@@ -2,24 +2,45 @@
 
 #include <iostream>
 
+/*
+
+* Dla poniższych klas ułóż drzewko dziedziczenia.
+- Tiger (Tygrys), Dog (Pies), Fish (Ryba), Eagle (Orzeł), Mammal (Ssak), Lion (Lew), Sparrow (Wróbel), Reptile (Gad), Trout (Pstrąg), Cat (Kot), Salmon (Łosoś), Animal (Zwierzę), Snake (Wąż), Bird (Ptak), Turtle (Żółw)
+- SUV (SUV), Pickup Truck (Pick-up), Truck (Ciężarówka), Car (Samochód), Sedan (Sedan), Motorcycle (Motocykl), Vehicle (Pojazd), Semi-Truck (Ciągnik siodłowy)
+- Smartphone (Smartfon), Android Phone (Telefon z systemem Android), Electronic Device (Urządzenie elektroniczne), LED TV (Telewizor LED), Laptop (Laptop), iPhone (iPhone), Television (Telewizor), Smart TV (Telewizor Smart)
+*/
+
 //Napisz klasy, które będą opisywać kwadrat, prostokąt, trapez
 
-class Quadrangle
+class Triangle
 {
 protected:
-	double sideA, sideB, sideC, sideD, height;
+	double sideA, sideB, sideC, height;
 public:
-	Quadrangle(double firstSide,
+	Triangle(double firstSide,
 		double secondSide,
 		double thirdSide,
-		double fourthSide,
 		double h)
 	{
 		sideA = firstSide;
 		sideB = secondSide;
 		sideC = thirdSide;
-		sideD = fourthSide;
 		height = h;
+	}
+};
+
+class Quadrangle:public Triangle
+{
+protected:
+	double sideD;
+public:
+	Quadrangle(double firstSide,
+		double secondSide,
+		double thirdSide,
+		double fourthSide,
+		double h):Triangle(firstSide, secondSide, thirdSide, height)
+	{
+		sideD = fourthSide;
 	}
 
 	double GetPerimeter()
