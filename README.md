@@ -59,7 +59,11 @@ https://cpp0x.pl/dokumentacja/standard-C/Data-i-czas/13
 
 
 
+char tmBuff[30];
 
+ctime_s(tmBuff, sizeof(tmBuff), &legacyStart);
+
+std::cout << tmBuff << '\n';
 
 
 
