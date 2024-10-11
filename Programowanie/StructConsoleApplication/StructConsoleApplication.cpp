@@ -1,10 +1,12 @@
 ﻿#include <iostream>
+#include <sys/stat.h>
 
 struct point
 {
 	int x;
 	int y;
 	int z;
+	std::string name;
 };
 
 double DistanceFromCenter(int x, int y, int z)
@@ -48,6 +50,7 @@ int main()
 	firstPoint.x = 3;
 	firstPoint.y = 5;
 	firstPoint.z = 8;
+	firstPoint.name = "Dom";
 	std::cout << "Odległość " << DistanceFromCenter(firstPoint.x, firstPoint.y, firstPoint.z) << "\n";
 	std::cout << "Odległość " << DistanceFromCenter(firstPoint) << "\n";
 
