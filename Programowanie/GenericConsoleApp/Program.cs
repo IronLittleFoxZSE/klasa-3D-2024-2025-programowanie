@@ -14,6 +14,8 @@ void ShowValue(bool value)
 }
 */
 
+using System.Collections.Generic;
+
 void ShowValue<T>(T value)
 {
     Console.WriteLine(value);
@@ -53,8 +55,55 @@ void Swap<T>(ref T x, ref T y)
     y = tmp;
 }
 
-int firstNumber = 2, secondNumber = 5;
+int firstNumber = 2;
+int secondNumber = 5;
 Swap(ref firstNumber, ref secondNumber);
 
 string firstText = "Ala", secondText = "Ola";
 Swap(ref firstText, ref secondText);
+
+
+//-------------------------------------------
+
+/*
+class MyClass
+{
+    int value;
+    public void MyMethod(string s)
+    {
+
+    }
+
+    //pozostała część klasy
+}
+
+class MyClass
+{
+    bool value;
+    public void MyMethod(int s)
+    {
+
+    }
+
+    //pozostała część klasy
+}
+*/
+
+MyClass<string, int> myClass = new MyClass<string, int>();
+
+MyClass<bool, int> myClass2 = new MyClass<bool, int>();
+
+class MyClass<T1, T2>
+{
+    T1 value;
+
+    public void MyMethod(T2 s)
+    {
+
+    }
+
+    //pozostała część klasy
+}
+
+
+
