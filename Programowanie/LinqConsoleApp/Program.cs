@@ -131,7 +131,7 @@ if (firstPerson.Equals(default(Person)) == false) // sprawdzenie dla typu warto�
 /*
 select Surname, count(*), max(Age)
 from people
-grooup by Surname
+group by Surname
 */
 
 var groupBySurname = people.GroupBy(p => p.Surname);
@@ -149,6 +149,28 @@ foreach(var group in groupBySurname)
     }
 }
 
+/*
+select
+from
+where
+group by name
+having count(*) > 5
+order by
 
 
-Console.Clear();
+*/
+
+/*
+select Name
+from people
+where age >=18
+
+*/
+
+List<string> names = people.Where(p => p.Age >= 18).Select<Person, string>(p => p.Name).ToList();
+
+Console.WriteLine("Lista nazwisk osób pełnoletnich");
+foreach(string name in names)
+{
+    Console.WriteLine(name);
+}
