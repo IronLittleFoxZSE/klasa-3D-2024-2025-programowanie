@@ -8,20 +8,15 @@ namespace LinqTasksConsoleApp
 {
     class TaskItem
     {
-        public int Id { get; set; }
+        public int TaskId { get; set; }
         public string Name { get; set; }
-        public bool IsCompleted { get; set; }
 
-        public TaskItem(int id, string name, bool isCompleted)
-        {
-            Id = id;
-            Name = name;
-            IsCompleted = isCompleted;
-        }
+        public int CategoryId { get; set; }
+        public bool IsCompleted { get; set; }
 
         public override string ToString()
         {
-            return $"Id: {Id}, Name: {Name}, IsCompleted: {IsCompleted}";
+            return $"Id: {TaskId}, Name: {Name}, IsCompleted: {IsCompleted}";
         }
     }
 }

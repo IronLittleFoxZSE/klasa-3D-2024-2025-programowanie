@@ -2,14 +2,40 @@
 
 using LinqTasksConsoleApp;
 
+
 var tasks = new List<TaskItem>
 {
-    new TaskItem(1, "Buy groceries", true),
-    new TaskItem(2, "Clean the house", false),
-    new TaskItem(3, "Pay bills", true),
-    new TaskItem(4, "Study LINQ", false),
-    new TaskItem(5, "Exercise", true)
+    new TaskItem { TaskId = 1, Name = "Buy groceries", CategoryId = 1, IsCompleted = true },
+    new TaskItem { TaskId = 2, Name = "Pay bills", CategoryId = 2, IsCompleted = false },
+    new TaskItem { TaskId = 3, Name = "Exercise", CategoryId = 1, IsCompleted = true },
+    new TaskItem { TaskId = 4, Name = "Clean house", CategoryId = 3, IsCompleted = false }
 };
+
+List<Category> categories = new List<Category>
+{
+    new Category { CategoryId = 1, CategoryName = "Shopping" },
+    new Category { CategoryId = 2, CategoryName = "Bills" },
+    new Category { CategoryId = 3, CategoryName = "Housework" },
+    new Category { CategoryId = 4, CategoryName = "Health" }
+};
+
+/*
+ select *
+from tasks t
+join categories c on c.CategoryId = t.CategoryId
+order by t.Name
+
+select *
+from (select t.Name, c.CategoryName
+        from tasks t
+        join categories c on c.CategoryId = t.CategoryId ) x
+order by x.Name
+*/
+
+var joinCollection = tasks
+    //.Where(t => t.IsCompleted)
+    .Join(categories, t => t.CategoryId, c => c.CategoryId, (t, c) => new { Name = t.Name, CategoryName = c.CategoryName })
+    .OrderBy(x => x.Name);
 
 /*
 var tasks = new List<TaskItem>();
@@ -198,3 +224,9 @@ foreach (var group in groupTasks)
 var x = tasks.All(t => t.Name.ToLower().Where(c => "aeiouy".Contains(c)).Distinct().Count() >= 2 );
 
 //Zadanie 16: Znajdź wszystkie unikalne litery używane w nazwach zadań zakończonych
+Console.WriteLine("Zadanie 16");
+//var y = tasks.Where(t => t.IsCompleted).SelectMany(t => t.Name.ToLower().Where(c => c >= 'a' && c <='z')).Distinct();
+var y = tasks.Where(t => t.IsCompleted).SelectMany(t => t.Name.ToLower().Where(c => char.IsLetter(c))).Distinct();
+
+Console.WriteLine(string.Join(", ", y));
+
