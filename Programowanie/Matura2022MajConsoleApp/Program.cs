@@ -59,4 +59,31 @@ foreach (string strNumber in strNumbers)
 
     //Console.WriteLine();
 }
-    Console.WriteLine($"Zadanie 4.2 {maxNumberPrimeFactors} {maxCountPrimeFactors} {maxNumberDifferentPrimeFactors} {maxCountDifferentPrimeFactors}");
+Console.WriteLine($"Zadanie 4.2 {maxNumberPrimeFactors} {maxCountPrimeFactors} {maxNumberDifferentPrimeFactors} {maxCountDifferentPrimeFactors}");
+
+//zadanie 4.3
+
+List<int> numbers = strNumbers.Select(strNumber => int.Parse(strNumber)).OrderBy(n => n).Distinct().ToList();
+
+for (int i = 0; i < numbers.Count(); i++)
+{
+    for (int j = i+1; j < numbers.Count(); j++)
+    {
+        if (/*numbers[i] < numbers[j]
+            && */numbers[j] % numbers[i] == 0)
+        {
+            for (int k = j+1; k < numbers.Count(); k++)
+            {
+                if (/*numbers[j] < numbers[k]
+                    && */numbers[k] % numbers[j] == 0)
+                    for (int l = k + 1; l < numbers.Count(); l++)
+                    {
+                        if (/*numbers[k] < numbers[l]
+                        && */numbers[l] % numbers[k] == 0)
+                            Console.WriteLine($"{numbers[i]} {numbers[j]} {numbers[k]} {numbers[l]}");
+                    }
+            }
+            
+        }
+    }
+}
