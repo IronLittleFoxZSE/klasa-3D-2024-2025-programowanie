@@ -83,6 +83,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matura2022MajConsoleApp", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matura2022CzerwiecConsoleApp", "Matura2022CzerwiecConsoleApp\Matura2022CzerwiecConsoleApp.csproj", "{56D7C787-13F8-472B-AE19-87631C51F4C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErrorHandlingConsoleApp", "ErrorHandlingConsoleApp\ErrorHandlingConsoleApp.csproj", "{3F802324-CB0A-45B3-89D7-A1013437572B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -369,6 +371,18 @@ Global
 		{56D7C787-13F8-472B-AE19-87631C51F4C1}.Release|x64.Build.0 = Release|Any CPU
 		{56D7C787-13F8-472B-AE19-87631C51F4C1}.Release|x86.ActiveCfg = Release|Any CPU
 		{56D7C787-13F8-472B-AE19-87631C51F4C1}.Release|x86.Build.0 = Release|Any CPU
+		{3F802324-CB0A-45B3-89D7-A1013437572B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F802324-CB0A-45B3-89D7-A1013437572B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F802324-CB0A-45B3-89D7-A1013437572B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3F802324-CB0A-45B3-89D7-A1013437572B}.Debug|x64.Build.0 = Debug|Any CPU
+		{3F802324-CB0A-45B3-89D7-A1013437572B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3F802324-CB0A-45B3-89D7-A1013437572B}.Debug|x86.Build.0 = Debug|Any CPU
+		{3F802324-CB0A-45B3-89D7-A1013437572B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F802324-CB0A-45B3-89D7-A1013437572B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F802324-CB0A-45B3-89D7-A1013437572B}.Release|x64.ActiveCfg = Release|Any CPU
+		{3F802324-CB0A-45B3-89D7-A1013437572B}.Release|x64.Build.0 = Release|Any CPU
+		{3F802324-CB0A-45B3-89D7-A1013437572B}.Release|x86.ActiveCfg = Release|Any CPU
+		{3F802324-CB0A-45B3-89D7-A1013437572B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -412,6 +426,7 @@ Global
 		{DC4397A3-8229-4B6C-B1C3-6239AE1070A6} = {64C2DC4E-37FA-4EC3-9594-7672E95FC079}
 		{23FD8E4A-7FB6-437B-B26E-AD4BB0F60A14} = {DC4397A3-8229-4B6C-B1C3-6239AE1070A6}
 		{56D7C787-13F8-472B-AE19-87631C51F4C1} = {DC4397A3-8229-4B6C-B1C3-6239AE1070A6}
+		{3F802324-CB0A-45B3-89D7-A1013437572B} = {64C2DC4E-37FA-4EC3-9594-7672E95FC079}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FF5DEF07-D041-4191-AF7B-6506152135A7}
